@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfAppPrac5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Работа с датами" Height="600" Width="750">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Левая панель -->
+        <StackPanel Grid.Column="0" Margin="10">
+
+            <Button Content="Сгенерировать 20 дат" Margin="0 0 0 10"
+                    Click="Generate_Click"/>
+
+            <Button Content="Сохранить в XML" Margin="0 0 0 10"
+                    Click="SaveXML_Click"/>
+
+            <Button Content="Загрузить из XML" Margin="0 0 0 20"
+                    Click="LoadXML_Click"/>
+
+            <TextBlock Text="Фильтр по году:"/>
+            <TextBox x:Name="YearBox" Margin="0 5 0 5"/>
+            <Button Content="Найти" Width="100" Click="FilterYear_Click"/>
+
+            <TextBlock Text="Фильтр по месяцу:" Margin="0 10 0 0"/>
+            <TextBox x:Name="MonthBox" Margin="0 5 0 5"/>
+            <Button Content="Найти" Width="100" Click="FilterMonth_Click"/>
+
+            <TextBlock Text="Фильтр по дню:" Margin="0 10 0 0"/>
+            <TextBox x:Name="DayBox" Margin="0 5 0 5"/>
+            <Button Content="Найти" Width="100" Click="FilterDay_Click"/>
+
+            <TextBlock Text="Диапазон лет:" Margin="0 20 0 5"/>
+            <TextBox x:Name="RangeStartBox" Margin="0 5 0 5" />
+            <TextBox x:Name="RangeEndBox" Margin="0 5 0 10" />
+            <Button Content="Посчитать" Width="120" Click="Range_Click"/>
+
+            <Button Content="Максимальная дата" Margin="0 15 0 15"
+                    Click="MaxDate_Click"/>
+
+            <Button Content="Сортировка ↑" Margin="0 5 0 5" Click="SortAsc_Click"/>
+            <Button Content="Сортировка ↓" Margin="0 5 0 5" Click="SortDesc_Click"/>
+
+            <Button Content="Добавить новую дату" Margin="0 10 0 5"
+                    Click="AddDate_Click"/>
+            <Button Content="Редактировать выбранную дату"
+                    Click="EditDate_Click"/>
+
+        </StackPanel>
+
+        <!-- Вывод -->
+        <ListView x:Name="DatesView" Grid.Column="1" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Дата" Width="150"
+                                    DisplayMemberBinding="{Binding}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
