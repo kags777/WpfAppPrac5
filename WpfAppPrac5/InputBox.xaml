@@ -7,4 +7,4 @@
         <TextBox x:Name="Input" Margin="0 5 0 10"/>
         <Button Content="OK" Click="OK_Click"/>
     </StackPanel>
-</Window>
+</Window> 
