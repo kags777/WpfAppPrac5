@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WpfAppPrac5.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Работа с датами" Height="600" Width="750">
+        Title="Работа с датами" Height="700" Width="750">
 
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
