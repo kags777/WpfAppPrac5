@@ -15,6 +15,8 @@ namespace WpfAppPrac5
         public MainWindow()
         {
             InitializeComponent();
+            InfoWindow info = new InfoWindow();
+            info.ShowDialog();
         }
 
         private DateTime RandomDate()

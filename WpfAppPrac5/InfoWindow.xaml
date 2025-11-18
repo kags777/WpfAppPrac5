@@ -1,0 +1,12 @@
+﻿<Window x:Class="WpfAppPrac5.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добро пожаловать!" Height="192" Width="500">
+    <StackPanel Margin="10">
+        <TextBlock Text="Это программа для работы с датами." 
+                   TextWrapping="Wrap" Margin="0 0 0 10"/>
+        <TextBlock Text="Здесь вы можете сгенерировать, отсортировать, изменить даты, а также добавить новые. &#10;Каждый раз после фильтрации, чтобы восстановить изначально сгенерированные даты, нужно нажимать (Загрузить XML), перед этим - обязательно сохранить!" 
+                   TextWrapping="Wrap" Margin="0 0 0 10"/>
+        <Button Content="Понятно, продолжить" Width="150" HorizontalAlignment="Center" Click="OK_Click"/>
+    </StackPanel>
+</Window>
